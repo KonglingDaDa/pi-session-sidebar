@@ -1,0 +1,56 @@
+{
+  "name": "pi-session-sidebar",
+  "version": "0.1.0",
+  "description": "A Pi terminal sidebar with session timelines, next-message predictions, and post-reply goal-closure advice.",
+  "type": "module",
+  "license": "MIT",
+  "author": "KonglingDaDa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KonglingDaDa/pi-session-sidebar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KonglingDaDa/pi-session-sidebar/issues"
+  },
+  "homepage": "https://github.com/KonglingDaDa/pi-session-sidebar#readme",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "sidebar",
+    "timeline",
+    "terminal",
+    "jev"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "files": [
+    "src/**/*.ts",
+    "!src/**/*.test.ts",
+    "README.md",
+    "LICENSE",
+    "docs/"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test src/timeline/*.test.ts src/advice/*.test.ts src/shared/*.test.ts",
+    "check:package": "node scripts/check-package.mjs",
+    "check": "npm run typecheck && npm test && npm run check:package"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.0.2",
+    "@earendil-works/pi-tui": "^1.0.2"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.0.2",
+    "@earendil-works/pi-tui": "1.0.2",
+    "@types/node": "^22.0.0",
+    "jiti": "^2.6.1",
+    "typescript": "^5.9.3"
+  }
+}

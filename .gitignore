@@ -1,0 +1,9 @@
+node_modules/
+.codegraph/
+*.tgz
+.env
+.env.*
+!.env.example
+*.jsonl
+coverage/
+.DS_Store
